@@ -1,0 +1,165 @@
+
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+body {
+  color: #fff;
+  /*text-align: center;*/
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+.navbar {
+    margin-bottom: 0;
+}
+.carousel {
+    height: 100%;
+    margin-bottom: 50px;
+}
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 110%;
+}
+.carousel .item {
+    height: 100%;
+    background-color: #777;
+}
+.carousel-inner > .item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 100%;
+}
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
+}
+#navfont {
+	color: #fff;
+}
+#copyrightname{
+  color: #fff;
+}
+#sorry{
+	text-align: center;
+}
+
+#featurette-divider-first {
+    margin: 40px 0 0 0;
+}
+#featurette-divider-second{
+	margin: 120px 0 60px 0;	
+}
+
+#featurette-divider-third {
+	margin: 30px 0;
+}
+
+#copyright{
+	text-align:center;
+	margin-bottom: 20px
+}
+
+#tagbox{
+	position:relative;
+	width:100%;
+	height:500px; 
+	display:table;
+	text-align:center;
+}
+#tagbox a{
+	position:absolute;
+	padding:1px 1px;
+	font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+	color:#fff;
+	text-decoration:none;
+	left:0px
+}
+#tagbox a:hover{background:none;color:yellow}
+#tagbox .blue{color:blue}
+#tagbox .red{color:red}
+#tagbox .yellow{color:yellow}
+#tagbox .green{color:green}
+#tagbox .black{color:black}
+#tagbox .white{color:white}
+
+#tagbox span{
+height:100%;
+display:inline-block;
+vertical-align:middle;
+}
+
+@media (min-width: 768px)
+landing.css:289
+.intro .intro-body .brand-heading {
+    padding-top: 250px;
+    text-align: center;
+    font-size: 4em;
+    font-weight: 700;
+}
+.intro .intro-body .brand-heading {
+    font-size: 2.7em;
+    text-align: center;
+    margin: 0 0 24px 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 35px;
+    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    letter-spacing: 1px;
+}
+@media (min-width: 768px)
+landing.css:285
+.intro {
+    height: 121%;
+    padding: 0;
+    text-align: right;
+}
+.intro {
+    display: table;
+    width: 100%;
+    height: 120%;
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+    background: url(../../assets/image/bewithyou.jpg) no-repeat scroll;
+    background-position: 50% auto;
+    background-color: #716091;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    margin-bottom: 80px;
+}
+::selection {
+    text-shadow: none; 
+    background: #dddddd; 
+}
+
+.intro .intro-body .brand-heading {
+    font-size: 2.7em;
+    text-align: center;
+    margin: 0 0 24px 0;
+    padding-top: 250px;
+    text-align: center;
+    font-size: 4em;
+    font-weight: 700;
+}
+.intro .intro-body {
+    display: table-cell;
+    vertical-align: middle;
+}
+@media (min-width: 768px)
+landing.css:296
+.intro .intro-body .intro-text {
+    font-size: 1.7em;
+    font-weight: 300;
+    text-align: center;
+}
+.intro .intro-body .intro-text {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0 0 12px 0;
+}

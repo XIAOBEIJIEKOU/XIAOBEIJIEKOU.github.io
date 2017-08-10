@@ -8,6 +8,9 @@ a:focus,
 a:hover {
   color: #fff;
 }
+h1{
+  margin-bottom: 20px
+}
 
 /* Custom default button */
 .btn-default,
@@ -35,6 +38,14 @@ body {
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
+#choose{
+  text-align: left;
+  width: 650px
+}
+#goto{
+  text-align: left;
+  width: 650px
+}
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
   display: table;
@@ -113,7 +124,7 @@ body {
   padding: 0 20px;
 }
 .cover .btn-lg {
-  padding: 10px 20px;
+  padding: 3px 8px;
   font-weight: bold;
 }
 
