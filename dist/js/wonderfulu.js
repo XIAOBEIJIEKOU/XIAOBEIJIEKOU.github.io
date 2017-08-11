@@ -16,9 +16,12 @@ $(document).ready(function(e) {
 			$(this).addClass('pause');
 			document.getElementById("music").play();
 		}
-	})
+	});
 
-	
-
+	var video = document.getElementById('video');
+	video.addEventListener('ended', function(){
+		
+		document.getElementById("music").play();
+	});
 })
 
