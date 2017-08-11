@@ -15,7 +15,6 @@
     <link href="../dist/css/wonderfulu.css" rel="stylesheet">
     
     <script src="../dist/js/jquery-3.1.1.min.js"></script>
-    <script src="../dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../dist/js/script.js"></script>
     <script type="text/javascript" src="../dist/js/wonderfulu.js"></script>
   </head>
@@ -134,12 +133,12 @@
         </div>
         <div class="col-md-7">
           <video width="100%" height="100%" id="video">
-			       <source src="../assets/video/just-fine.mp4" type="video/mp4" onplaying="stopMusic()" onended="restartMusic()" onpause="restartMusic()">
+			       <source src="../assets/video/just-fine.mp4" type="video/mp4" preload="auto">
 		      </video>
 		    </div>
       </div>
 
-      <audio  autoplay="autoplay" controls hidden="true" id="music">
+      <audio  autoplay="autoplay" preload="auto" loop="loop" hidden="true" id="music">
           <source  src="../assets/music/SaySomething.mp3"  type="audio/mpeg">
       </audio>
 
