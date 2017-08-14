@@ -11,14 +11,11 @@
 
     <!-- Bootstrap core CSS -->
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../dist/css/video-js.min.css" rel="stylesheet">
     <link href="../dist/css/carousel.css" rel="stylesheet">
     <link href="../dist/css/wonderfulu.css" rel="stylesheet">
-    
-    <script src="../dist/js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="../dist/js/script.js"></script>
-    <script type="text/javascript" src="../dist/js/wonderfulu.js"></script>
   </head>
-<!-- NAVBAR ================================================== -->
+<!-- NAriAR ================================================== -->
   <body>
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
       
@@ -42,17 +39,7 @@
                     <div class="col-xs-12">
                         <h1 class="brand-heading">I just wanna go wherever <br>with you by my side.</h1>
                         <p class="intro-text">I have been waiting here in line , Hoping that I'll find what I' ve been chasing .<br>I shot for the  sky，but I'm stuck on the ground .<br></p>
-
                         <br>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12 text-center">
-                        <a href="http://www.honeyfi.com/#solution" id="chevron-how-it-works">
-                            <i class="fa fa-chevron-down chevron-icon" aria-hidden="true"></i>
-                        </a>
-                         </div>
                     </div>
                 </div>
             </div>
@@ -132,9 +119,14 @@
             <p class="lead">I guess you'll never know what this website is and who i am.I like you ,I know it .I sow a seed of love here and I will wait for it grows slowly.</p>
         </div>
         <div class="col-md-7">
-          <video width="100%" height="100%" id="video" preload="auto">
-			       <source src="../assets/video/just-fine.mp4" poster="../assets/image/timg.gif" control="control" type="video/mp4">
-		      </video>
+          <!-- <video width="100%" height="100%" id="video" preload="auto">
+			       <source src="../assets/video/just-fine.mp4" controls poster="../assets/image/be-with-you.jpg" control="control" type="video/mp4">
+		      </video> -->
+          <video id="video" class="video-js vjs-big-play-centered" controls preload="auto" 
+                poster="../assets/image/be-with-you.jpg"
+                data-setup="{}">
+            <source src="../assets/video/just-fine.mp4" type='video/mp4' />
+          </video>
 		    </div>
       </div>
 
@@ -151,5 +143,9 @@
             </div>
       </div>
     </div><!-- /.container -->
+    <script type="text/javascript" src="../dist/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../dist/js/script.js"></script>
+    <script type="text/javascript" src="../dist/js/video.min.js"></script>
+    <script type="text/javascript" src="../dist/js/wonderfulu.js"></script>
   </body>
 </html>

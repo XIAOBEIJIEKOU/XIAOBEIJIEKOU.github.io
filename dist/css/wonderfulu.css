@@ -93,6 +93,8 @@ vertical-align:middle;
 }
 #video{
     margin-top: 60px;
+    width:100%;
+    height:350px; 
 }
 #featurette-heading-video{
     margin-top: 60px;
@@ -129,7 +131,7 @@ landing.css:285
     padding: 100px 0;
     text-align: center;
     color: white;
-    background: url(../../assets/image/bewithyou.jpg) no-repeat scroll;
+    background: url(../../assets/image/be-with-you.jpg) no-repeat scroll;
     background-position: 50% auto;
     background-color: #716091;
     -webkit-background-size: cover;
@@ -167,4 +169,9 @@ landing.css:296
     font-size: 1.5em;
     text-align: center;
     margin: 0 0 12px 0;
+}
+.poster{
+    background-image: url(../../assets/image/timg.gif);
+    width:100%;
+     height:100%
 }
