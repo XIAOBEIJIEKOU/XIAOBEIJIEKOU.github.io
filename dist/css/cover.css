@@ -21,7 +21,10 @@ h1{
   background-color: #fff;
   border: 1px solid #fff;
 }
-
+br
+{
+    margin-bottom: 1em;    /*  设定<br /> 与下面间距1个字符， 1em也可以设为16px等  */
+}
 
 /*
  * Base structure
