@@ -1,67 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WonderfulU</title>
+  <link rel="stylesheet" type="text/css" href="../dist/css/normalize.css" />
+  <style type="text/css">
+    html {
+      overflow: hidden;
+      -ms-touch-action: none;
+      -ms-content-zooming: none;
+    }
+    body {
+      position: absolute;
+      margin: 0px;
+      padding: 0px;
+      background: #fff;
+      width: 100%;
+      height: 100%;
+    }
+    #screen {
+      position: absolute;
+      left:0;
+      top:0;
+      width: 100%;
+      height: 100%;
+      background:#000;
+      perspective:500px;
+      -webkit-perspective:500px;
+    }
 
-    <title>南南弯漾</title>
+    .cube {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      margin: 0;
+      user-select: none;
+      transform-style: preserve-3d;
+      -webkit-transform-style: preserve-3d;
+    }
 
-    <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    .face {
+      position: absolute;
+      margin-left:-300px;
+      margin-top:-200px;
+      width:600px;
+      height:400px;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      transform-origin:50% 50%;
+      -webkit-transform-origin:50% 50%;
+      transition: outline 0.5s ease-in-out 0s;
+      cursor: pointer;
+    }
 
-    <!-- Custom styles for this template -->
-    <link href="../dist/css/cover.css" rel="stylesheet">
-  </head>
-
-  <body>
+    .button {
+      position: absolute;
+      margin-left:-150px;
+      margin-top:-100px;
+      width:300px;
+      height:200px;
+    }
+    .face:hover {
+      outline: rgba(255,255,255,1) solid 10px !important;
+    }
+  </style>
+</head>
+<body>
+  <div id="screen">
+    <div id="cube" class='cube'>
+      <!-- cube images -->
+      <!-- 正前 --><img id="1" src="../assets/image/be-with-you.jpg" class='face' data-transform="translateZ(-400px)" style="outline:none !important">
+      <!-- 左 --><img id="2" src="../assets/image/1.jpg" class='face' data-transform="rotateY(90deg) translateZ(-400px)">
+      <!-- 右 --><img id="3" src="../assets/image/1.jpg"  class='face' data-transform="rotateY(-90deg) translateZ(-400px)">
+      <!-- 正后 --><img id="4" src="../assets/image/1.jpg" class='face' data-transform="rotateY(180deg) translateZ(-400px)">
+      <!-- 底 --><img id="5" src="../assets/image/1.jpg" class='face' data-transform="rotateX(90deg) translateZ(-300px)">
+      <!-- 顶 --><img id="6" src="../assets/image/1.jpg"  class='face' data-transform="rotateX(-90deg) translateZ(-300px)">
+      <!-- bonus image -->
+      <!-- <img id="7" src="img/7.jpg"  class='face' data-transform="rotateY(180deg) translateZ(305px)" style="visibility:hidden"> -->
       
-      
-      <div class="site-wrapper">
-        <div class="site-wrapper-inner">
-          <div class="cover-container">
-            <div class="inner cover">
-              <h1 class="cover-heading">Hello , Sweety !.</h1>
-              <p class="lead"><a href="../assets/others/wonderfulu.vbs" download="wonderfulu.vbs">
-              There is a gift prepared for you .</a> </p>
-            </div>
-          </div>
-        </div>
-	    </div>
-    	<!-- <div class="container">
-      	<div class="row">
-      	  <div class="col-sm-6 col-md-4">
-      		<div class="thumbnail">
-      		  <img src="../assets/image/confess_01.jpg" alt="...">
-      		</div>
-      	  </div>
-      	  <div class="col-sm-6 col-md-4">
-      		<div class="thumbnail">
-      		  <img src="../assets/image/confess_02.jpg" alt="...">
-      		</div>
-      	  </div>
-      	  <div class="col-sm-6 col-md-4">
-      		<div class="thumbnail">
-      		  <img src="../assets/image/confess_03.jpg" alt="...">
-      		</div>
-      	  </div><div class="col-sm-6 col-md-4">
-      		<div class="thumbnail">
-      		  <img src="../assets/image/confess_04.jpg" alt="...">
-      		</div>
-      	  </div>
-      	  <div class="col-sm-6 col-md-4">
-      		<div class="thumbnail">
-      		  <img src="../assets/image/confess_05.jpg" alt="...">
-      		</div>
-    	  </div>
-      </div> -->
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="dist/js/bootstrap.min.js"></script>
-	<script src="dist/js/jquery-3.1.1.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  </body>
+      <!-- buttons -->
+      <!-- 左面墙 -->
+      <img src="../assets/image/1.jpg" class='face button' alt="2" data-transform="translateX(-340px) translateY(-80px) translateZ(-200px) rotateY(90deg) scale(0.5)">
+      <img src="../assets/image/2.jpg"  class='face button' alt="6" data-transform="translateX(-340px) translateY(-80px) translateZ(0px) rotateY(90deg)  scale(0.5)">
+      <img src="../assets/image/3.jpg"  class='face button' alt="3" data-transform="translateX(-340px) translateY(-80px) translateZ(200px) rotateY(90deg) scale(0.5)">
+      <img src="../assets/image/4.jpg" class='face button' alt="2" data-transform="translateX(-340px) translateY(80px) translateZ(-200px) rotateY(90deg) scale(0.5)">
+      <img src="../assets/image/5.jpg"  class='face button' alt="6" data-transform="translateX(-340px) translateY(80px) translateZ(0px) rotateY(90deg)  scale(0.5)">
+      <img src="../assets/image/6.jpg"  class='face button' alt="3" data-transform="translateX(-340px) translateY(80px) translateZ(200px) rotateY(90deg) scale(0.5)">
+      <!-- 右面墙 -->
+      <img src="../assets/image/1.jpg" class='face button' alt="2" data-transform="translateX(340px) translateY(-80px) translateZ(-200px) rotateY(-90deg) scale(0.5)">
+      <img src="../assets/image/2.jpg"  class='face button' alt="6" data-transform="translateX(340px) translateY(-80px) translateZ(0px) rotateY(-90deg)  scale(0.5)">
+      <img src="../assets/image/3.jpg"  class='face button' alt="3" data-transform="translateX(340px) translateY(-80px) translateZ(200px) rotateY(-90deg) scale(0.5)">
+      <img src="../assets/image/4.jpg" class='face button' alt="2" data-transform="translateX(340px) translateY(80px) translateZ(-200px) rotateY(-90deg) scale(0.5)">
+      <img src="../assets/image/5.jpg"  class='face button' alt="6" data-transform="translateX(340px) translateY(80px) translateZ(0px) rotateY(-90deg)  scale(0.5)">
+      <img src="../assets/image/6.jpg"  class='face button' alt="3" data-transform="translateX(340px) translateY(80px) translateZ(200px) rotateY(-90deg) scale(0.5)">
+      <!-- 顶面墙 -->
+      <img src="../assets/image/1.jpg" class='face button' alt="2" data-transform="translateX(-100px) translateY(-260px) translateZ(80px) rotateX(-90deg) scale(0.5)">
+      <img src="../assets/image/2.jpg"  class='face button' alt="6" data-transform="translateX(100px) translateY(-260px) translateZ(80px) rotateX(-90deg)  scale(0.5)">
+      <img src="../assets/image/3.jpg"  class='face button' alt="3" data-transform="translateX(-100px) translateY(-260px) translateZ(-80px) rotateX(-90deg) scale(0.5)">
+      <img src="../assets/image/4.jpg" class='face button' alt="2" data-transform="translateX(100px) translateY(-260px) translateZ(-80px) rotateX(-90deg) scale(0.5)">
+      <!-- 底面墙 -->
+      <img src="../assets/image/1.jpg" class='face button' alt="2" data-transform="translateX(-100px) translateY(260px) translateZ(80px) rotateX(90deg) scale(0.5)">
+      <img src="../assets/image/2.jpg"  class='face button' alt="6" data-transform="translateX(100px) translateY(260px) translateZ(80px) rotateX(90deg)  scale(0.5)">
+      <img src="../assets/image/3.jpg"  class='face button' alt="3" data-transform="translateX(-100px) translateY(260px) translateZ(-80px) rotateX(90deg) scale(0.5)">
+      <img src="../assets/image/4.jpg" class='face button' alt="2" data-transform="translateX(100px) translateY(260px) translateZ(-80px) rotateX(90deg) scale(0.5)">
+    </div>
+  </div>
+  <script type="text/javascript" src="../dist/js/main.js"></script>
+</body>
 </html>

@@ -15,6 +15,7 @@
     <link href="dist/css/carousel.css" rel="stylesheet">
     <link href="dist/css/wonderfulu.css" rel="stylesheet">
     <link href="dist/css/video-js.css" rel="stylesheet">
+
     <script type="text/javascript" src="dist/js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="dist/js/script.js"></script>
     <script type="text/javascript" src="dist/js/video.min.js"></script>
@@ -36,9 +37,16 @@
       </div>      
             <!-- /.container -->
     </nav>
+    <script type="text/javascript">
+        $()
+    </script>
 
     <!-- Intro Header -->
-    <header class="intro">
+    
+      
+
+   
+    <header class="intro" >
         <div id="landing-intro" class="intro-body">
             <div class="container">
                 <div class="row">
@@ -122,13 +130,7 @@
             <p class="lead">I guess you'll never know what this website is and who i am.I like you ,I know it .I sow a seed of love here and I will wait for it grows slowly.</p>
         </div>
         <div class="col-md-7">
-          <img src="assets/image/be-with-you.jpg"  data-toggle="modal" data-target="#myModal" width="100%">
-
-         <!--  <video id="video" class="video-js vjs-big-play-centered" controls preload="auto" 
-                poster="../"
-                data-setup="{}">
-            <source src="../assets/video/just-fine.mp4" type='video/mp4' />
-          </video> -->
+          <img src="assets/image/be-with-you.jpg"  data-toggle="modal" data-target="#myModal" width="100%" onclick="showVideo()">
         </div>
       </div>
 
@@ -144,9 +146,7 @@
               <p id="copyright">&copy;2017-02-21. This is for the girl <a href="" id="copyrightname"> @南南弯漾</a> who I love， by <a href="" id="copyrightname"> @小北街口 </a>.<span style="float: right;"><a href="html/confess.html" target="_blank">You won't click here</a></span></p>
             </div>
       </div>
-      <!-- <span style="float: right;"><a href="../assets/image/be-with-you.jpg" download="be-with-you.jpg">You won't click here</a></span> -->
     </div><!-- /.container -->
-
 
     <!-- 模态框Modal 要放在<body>的下面不然会和其他css冲突-->
     <div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">  
@@ -159,12 +159,21 @@
                     </video>
                       <script src="dist/js/video.min.js"></script>   
                       <script type="text/javascript">
-                            var myPlayer = videojs('my-video');
-                            videojs("my-video").ready(function(){
-                            var myPlayer = this;
+                          function showVideo(){
+                            var myPlayer = videojs('my-video');                            
+                            // var myPlayer = this;
                             myPlayer.play();
-                        });
-                    </script>  
+                            myPlayer.on("play", function(){
+                               document.getElementById("music").pause();
+                            });
+                            myPlayer.on("ended", function(){
+                               document.getElementById("music").play();
+                            });
+                            myPlayer.on("pause", function(){
+                                document.getElementById("music").play();
+                            });    
+                          }
+                      </script>  
                 </div>  
         
         </div>  
