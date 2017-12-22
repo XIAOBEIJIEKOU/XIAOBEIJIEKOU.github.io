@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WonderfulU</title>
   <link rel="stylesheet" type="text/css" href="../dist/css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="../dist/css/video-js.css" />
   <style type="text/css">
     html {
       overflow: hidden;
@@ -47,8 +48,8 @@
       position: absolute;
       margin-left:-300px;
       margin-top:-200px;
-      width:600px;
-      height:400px;
+      width:750px;
+      height:550px;
       backface-visibility: hidden;
       -webkit-backface-visibility: hidden;
       transform-origin:50% 50%;
@@ -61,9 +62,18 @@
       position: absolute;
       margin-left:-150px;
       margin-top:-100px;
-      width:300px;
-      height:200px;
+      width:189px;
+      height:336px;
     }
+
+    .button2 {
+      position: absolute;
+      margin-left:-150px;
+      margin-top:-100px;
+      width:336px;
+      height:189px;
+    }
+
     .face:hover {
       outline: rgba(255,255,255,1) solid 10px !important;
     }
@@ -73,40 +83,49 @@
   <div id="screen">
     <div id="cube" class='cube'>
       <!-- cube images -->
+      <div class='face' data-transform="translateZ(-400px)" style="outline:none !important">
+          <video id="my-video" class="video-js" controls preload="auto" width="740" height="400"
+                      poster="m.png" data-setup="{}">
+                        <source src="http://jq22com.qiniudn.com/jq22-sp.mp4" type="video/mp4">
+                    </video>
+      </div>
+      
+
       <!-- 正前 --><img id="1" src="../assets/image/be-with-you.jpg" class='face' data-transform="translateZ(-400px)" style="outline:none !important">
-      <!-- 左 --><img id="2" src="../assets/image/1.jpg" class='face' data-transform="rotateY(90deg) translateZ(-400px)">
-      <!-- 右 --><img id="3" src="../assets/image/1.jpg"  class='face' data-transform="rotateY(-90deg) translateZ(-400px)">
-      <!-- 正后 --><img id="4" src="../assets/image/1.jpg" class='face' data-transform="rotateY(180deg) translateZ(-400px)">
-      <!-- 底 --><img id="5" src="../assets/image/1.jpg" class='face' data-transform="rotateX(90deg) translateZ(-300px)">
-      <!-- 顶 --><img id="6" src="../assets/image/1.jpg"  class='face' data-transform="rotateX(-90deg) translateZ(-300px)">
+      <!-- 左 --><img id="2" src="../assets/image/snow1.jpg" class='face' data-transform="rotateY(90deg) translateZ(-400px)">
+      <!-- 右--><img id="3" src="../assets/image/snow1.jpg"  class='face' data-transform="rotateY(-90deg) translateZ(-400px)">
+      <!-- 正后 --><img id="4" src="../assets/image/snowBehand.jpg" class='face' data-transform="rotateY(180deg) translateZ(-400px)">
+      <!-- 底 --><img id="5" src="../assets/image/snow1.jpg" class='face' data-transform="rotateX(90deg) translateZ(-300px)">
+      <!-- 顶 --><img id="6" src="../assets/image/snow1.jpg"  class='face' data-transform="rotateX(-90deg) translateZ(-300px)">
       <!-- bonus image -->
       <!-- <img id="7" src="img/7.jpg"  class='face' data-transform="rotateY(180deg) translateZ(305px)" style="visibility:hidden"> -->
       
       <!-- buttons -->
       <!-- 左面墙 -->
-      <img src="../assets/image/1.jpg" class='face button' alt="2" data-transform="translateX(-340px) translateY(-80px) translateZ(-200px) rotateY(90deg) scale(0.5)">
-      <img src="../assets/image/2.jpg"  class='face button' alt="6" data-transform="translateX(-340px) translateY(-80px) translateZ(0px) rotateY(90deg)  scale(0.5)">
-      <img src="../assets/image/3.jpg"  class='face button' alt="3" data-transform="translateX(-340px) translateY(-80px) translateZ(200px) rotateY(90deg) scale(0.5)">
-      <img src="../assets/image/4.jpg" class='face button' alt="2" data-transform="translateX(-340px) translateY(80px) translateZ(-200px) rotateY(90deg) scale(0.5)">
-      <img src="../assets/image/5.jpg"  class='face button' alt="6" data-transform="translateX(-340px) translateY(80px) translateZ(0px) rotateY(90deg)  scale(0.5)">
-      <img src="../assets/image/6.jpg"  class='face button' alt="3" data-transform="translateX(-340px) translateY(80px) translateZ(200px) rotateY(90deg) scale(0.5)">
+      <img src="../assets/image/boy.jpg" class='face button'  data-transform="translateX(-220px) translateY(-140px) translateZ(-200px) rotateY(90deg) scale(0.5)">
+      <img src="../assets/image/man.jpg"  class='face button' data-transform="translateX(-220px) translateY(-140px) translateZ(0px) rotateY(90deg)  scale(0.5)">
+      <img src="../assets/image/nice.jpg"  class='face button'  data-transform="translateX(-220px) translateY(-140px) translateZ(200px) rotateY(90deg) scale(0.5)">
+      <img src="../assets/image/sun.jpg" class='face button'  data-transform="translateX(-220px) translateY(60px) translateZ(-200px) rotateY(90deg) scale(0.5)">
+      <img src="../assets/image/wu.jpg"  class='face button' data-transform="translateX(-220px) translateY(60px) translateZ(0px) rotateY(90deg)  scale(0.5)">
+      <img src="../assets/image/kong.jpg"  class='face button' data-transform="translateX(-220px) translateY(60px) translateZ(200px) rotateY(90deg) scale(0.5)">
       <!-- 右面墙 -->
-      <img src="../assets/image/1.jpg" class='face button' alt="2" data-transform="translateX(340px) translateY(-80px) translateZ(-200px) rotateY(-90deg) scale(0.5)">
-      <img src="../assets/image/2.jpg"  class='face button' alt="6" data-transform="translateX(340px) translateY(-80px) translateZ(0px) rotateY(-90deg)  scale(0.5)">
-      <img src="../assets/image/3.jpg"  class='face button' alt="3" data-transform="translateX(340px) translateY(-80px) translateZ(200px) rotateY(-90deg) scale(0.5)">
-      <img src="../assets/image/4.jpg" class='face button' alt="2" data-transform="translateX(340px) translateY(80px) translateZ(-200px) rotateY(-90deg) scale(0.5)">
-      <img src="../assets/image/5.jpg"  class='face button' alt="6" data-transform="translateX(340px) translateY(80px) translateZ(0px) rotateY(-90deg)  scale(0.5)">
-      <img src="../assets/image/6.jpg"  class='face button' alt="3" data-transform="translateX(340px) translateY(80px) translateZ(200px) rotateY(-90deg) scale(0.5)">
+      <img src="../assets/image/boy.jpg" class='face button' data-transform="translateX(460px) translateY(-140px) translateZ(-200px) rotateY(-90deg) scale(0.5)">
+      <img src="../assets/image/man.jpg"  class='face button' data-transform="translateX(460px) translateY(-140px) translateZ(0px) rotateY(-90deg)  scale(0.5)">
+      <img src="../assets/image/nice.jpg"  class='face button' data-transform="translateX(460px) translateY(-140px) translateZ(200px) rotateY(-90deg) scale(0.5)">
+      <img src="../assets/image/sun.jpg" class='face button' data-transform="translateX(460px) translateY(60px) translateZ(-200px) rotateY(-90deg) scale(0.5)">
+      <img src="../assets/image/wu.jpg"  class='face button' data-transform="translateX(460px) translateY(60px) translateZ(0px) rotateY(-90deg)  scale(0.5)">
+      <img src="../assets/image/kong.jpg"  class='face button' data-transform="translateX(460px) translateY(60px) translateZ(200px) rotateY(-90deg) scale(0.5)">
       <!-- 顶面墙 -->
-      <img src="../assets/image/1.jpg" class='face button' alt="2" data-transform="translateX(-100px) translateY(-260px) translateZ(80px) rotateX(-90deg) scale(0.5)">
-      <img src="../assets/image/2.jpg"  class='face button' alt="6" data-transform="translateX(100px) translateY(-260px) translateZ(80px) rotateX(-90deg)  scale(0.5)">
-      <img src="../assets/image/3.jpg"  class='face button' alt="3" data-transform="translateX(-100px) translateY(-260px) translateZ(-80px) rotateX(-90deg) scale(0.5)">
-      <img src="../assets/image/4.jpg" class='face button' alt="2" data-transform="translateX(100px) translateY(-260px) translateZ(-80px) rotateX(-90deg) scale(0.5)">
+      <img src="../assets/image/nice.jpg" class='face button2' data-transform="translateX(-100px) translateY(-170px) translateZ(80px) rotateX(-90deg) scale(0.5)">
+      <img src="../assets/image/boy.jpg"  class='face button2' data-transform="translateX(100px) translateY(-170px) translateZ(80px) rotateX(-90deg)  scale(0.5)">
+      <img src="../assets/image/nice.jpg"  class='face button2' data-transform="translateX(-100px) translateY(-170px) translateZ(-80px) rotateX(-90deg) scale(0.5)">
+      <img src="../assets/image/boy.jpg"  class='face button2' data-transform="translateX(100px) translateY(-170px) translateZ(-80px) rotateX(-90deg) scale(0.5)">
+      <img src="../assets/image/snowBehand.jpg" class='face button2' data-transform="translateX(-300px) translateY(-340px) translateZ(80px) rotateX(-90deg) scale(0.5)">
       <!-- 底面墙 -->
-      <img src="../assets/image/1.jpg" class='face button' alt="2" data-transform="translateX(-100px) translateY(260px) translateZ(80px) rotateX(90deg) scale(0.5)">
-      <img src="../assets/image/2.jpg"  class='face button' alt="6" data-transform="translateX(100px) translateY(260px) translateZ(80px) rotateX(90deg)  scale(0.5)">
-      <img src="../assets/image/3.jpg"  class='face button' alt="3" data-transform="translateX(-100px) translateY(260px) translateZ(-80px) rotateX(90deg) scale(0.5)">
-      <img src="../assets/image/4.jpg" class='face button' alt="2" data-transform="translateX(100px) translateY(260px) translateZ(-80px) rotateX(90deg) scale(0.5)">
+      <img src="../assets/image/nice.jpg" class='face button2' data-transform="translateX(-90px) translateY(270px) translateZ(80px) rotateX(90deg) scale(0.5)">
+      <img src="../assets/image/nice.jpg"  class='face button2' data-transform="translateX(160px) translateY(270px) translateZ(80px) rotateX(90deg)  scale(0.5)">
+      <img src="../assets/image/nice.jpg"  class='face button2' data-transform="translateX(-90px) translateY(270px) translateZ(-80px) rotateX(90deg) scale(0.5)">
+      <img src="../assets/image/nice.jpg" class='face button2' data-transform="translateX(160px) translateY(270px) translateZ(-80px) rotateX(90deg) scale(0.5)">
     </div>
   </div>
   <script type="text/javascript" src="../dist/js/main.js"></script>
