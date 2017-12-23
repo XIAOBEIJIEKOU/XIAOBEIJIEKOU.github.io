@@ -11,7 +11,6 @@
 
     <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="dist/css/video-js.min.css" rel="stylesheet">
     <link href="dist/css/carousel.css" rel="stylesheet">
     <link href="dist/css/wonderfulu.css" rel="stylesheet">
     <link href="dist/css/video-js.css" rel="stylesheet">
@@ -19,7 +18,6 @@
     <script type="text/javascript" src="dist/js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="dist/js/script.js"></script>
     <script type="text/javascript" src="dist/js/video.min.js"></script>
-    <script type="text/javascript" src="dist/js/wonderfulu.js"></script>
     <script type="text/javascript" src="dist/js/modal.js"></script>
   </head>
 <!-- NAriAR ================================================== -->
@@ -52,7 +50,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <h1 class="brand-heading">I just wanna go wherever <br>with you by my side.</h1>
-                        <p class="intro-text">I have been waiting here in line , Hoping that I'll find what I' ve been chasing .<br>I shot for the  sky，but I'm stuck on the ground .<br></p>
+                        <!-- <p class="intro-text">I have been waiting here in line , Hoping that I'll find what I' ve been chasing .<br>I shot for the  sky，but I'm stuck on the ground .<br></p> -->
                         <br>
                     </div>
                 </div>
@@ -130,20 +128,20 @@
             <p class="lead">I guess you'll never know what this website is and who i am.I like you ,I know it .I sow a seed of love here and I will wait for it grows slowly.</p>
         </div>
         <div class="col-md-7">
-          <img src="assets/image/be-with-you-poster.jpg"  data-toggle="modal" data-target="#myModal" width="100%" onclick="showVideo()" onmouseenter="showMsg()">
+          <img src="assets/image/be-with-you-poster.jpg"  data-toggle="modal" data-target="#myModal" width="100%" onclick="showVideo()">
         </div>
       </div>
 
-      <audio  autoplay="autoplay" preload="auto" loop="loop" hidden="true" id="music">
+<!--       <audio  autoplay="autoplay" preload="auto" loop="loop" hidden="true" id="music">
           <source  src="http://music.163.com/song/media/outer/url?id=28208046.mp3"  type="audio/mpeg">
       </audio>
-
+ -->
 
       <hr class="featurette-divider" id="featurette-divider-third">
       <!-- FOOTER -->
       <div class="mastfoot">
             <div class="inner">
-              <p id="copyright">&copy;2015-03-01. This is for the girl <a href="" id="copyrightname"> @南南弯漾</a> who I love， by <a href="" id="copyrightname"> @小北街口 </a>.<span style="float: right;"><a href="html/confess.html" target="_blank">You won't click here</a></span></p>
+              <p id="copyright">&copy;2015-03-01. This is for the girl <a href="" id="copyrightname"> @南南弯漾</a> who I love， by <a href="" id="copyrightname"> @小北街口 </a>.<span style="float: right;"><a href="html/confess.html" target="_blank" id="copyrightname">click and show a gift</a></span></p>
             </div>
       </div>
     </div><!-- /.container -->
@@ -154,7 +152,7 @@
             <div class="modal-content">  
                     <!-- 无背景，只有遮罩层 -->
                     <video id="my-video" class="video-js" controls preload="auto" width="740" height="400"
-                      poster="m.png" data-setup="{}">
+                      data-setup="{}">
                         <source src="assets/video/just-fine.mp4" type="video/mp4">
                     </video>
                       <script src="dist/js/video.min.js"></script>   
