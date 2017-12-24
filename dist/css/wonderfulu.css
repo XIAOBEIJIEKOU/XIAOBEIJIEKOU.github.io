@@ -221,3 +221,7 @@ a:hover {
       animation: neon1 1.5s ease-in-out infinite alternate;
        text-decoration: none;
 }
+
+#zhongwen{
+  font-size: 17px
+}
